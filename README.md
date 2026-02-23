@@ -1,16 +1,1 @@
-# Bil Tech — React + Vite Landing
-
-Scaffolded modern static landing page built with React and Vite.
-
-Getting started:
-
-1. Install dependencies:
-   npm install
-
-2. Run dev server:
-   npm run dev
-
-Build:
-npm run build
-
-This project was scaffolded by Copilot CLI.
+# clone this plumbing site from theme forest : https://preview.themeforest.net/item/plumbero-plumber-repair-services-html-template/full_screen_preview/49372110?_ga=2.4828403.174929008.1702491965-640580638.1700295952
