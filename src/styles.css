@@ -1,0 +1,52 @@
+:root {
+  --bg: #0f172a;
+  --accent: #7c3aed;
+  --muted: #9aa4b2;
+  --white: #ffffff;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%;margin:0}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:linear-gradient(180deg,#071020 0%, var(--bg) 100%); color:var(--white); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+
+.container{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.hero{
+  padding: 8rem 0 6rem;
+  text-align:center;
+}
+
+.title{
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin:0;
+  letter-spacing: -0.02em;
+}
+
+.subtitle{
+  color:var(--muted);
+  margin-top:1rem;
+  font-size:1.125rem;
+}
+
+.cta{
+  display:inline-block;
+  margin-top:1.5rem;
+  background:linear-gradient(90deg,var(--accent),#4f46e5);
+  color:var(--white);
+  padding:0.75rem 1.25rem;
+  border-radius:0.6rem;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 6px 18px rgba(124,58,237,0.18);
+}
+
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:2rem}
+.feature{background:rgba(255,255,255,0.03);padding:1.5rem;border-radius:0.75rem}
+.feature h2{margin:0 0 0.5rem}
+.feature p{margin:0;color:var(--muted)}
+
+.footer{border-top:1px solid rgba(255,255,255,0.03);padding:2rem 0;text-align:center;color:var(--muted);margin-top:3rem}
