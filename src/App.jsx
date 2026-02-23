@@ -1,91 +1,95 @@
 import React from 'react'
-import img1 from './assets/images/plumbero-img39.png'
-import img2 from './assets/images/plumbero-img6.png'
-import img3 from './assets/images/plumbero-img7.png'
+import heating1 from './assets/images/heating1.jpg'
+import heating2 from './assets/images/heating2.jpg'
+import heating3 from './assets/images/heating3.jpg'
 
 export default function App() {
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    alert('Bedankt! We nemen binnenkort contact met u op.')
+  }
+
   return (
     <main className="app">
       <header className="hero">
         <div className="container">
-          <h1 className="title">Bil Tech Heating</h1>
-          <p className="subtitle">Expert heating solutions for homes and businesses</p>
-          <a className="cta" href="#gallery">See our work</a>
+          <h1 className="title">Bil Tech Verwarming</h1>
+          <p className="subtitle">Expert verwarmingsoplossingen voor huizen en bedrijven</p>
+          <a className="cta" href="#gallery">Bekijk ons werk</a>
         </div>
       </header>
 
       <section className="services container">
-        <h2>Heating Services</h2>
+        <h2>Verwarmingsdiensten</h2>
         <ul className="service-list">
-          <li>Boiler installation & repair</li>
-          <li>Radiator fitting & maintenance</li>
-          <li>Underfloor heating</li>
-          <li>Central heating upgrades</li>
-          <li>Emergency heating repairs</li>
+          <li>Ketelinstallatie & reparatie</li>
+          <li>Radiatormontage & onderhoud</li>
+          <li>Vloerverwarming</li>
+          <li>Centrale verwarmingsupgrades</li>
+          <li>Noodstopbeurten verwarming</li>
         </ul>
       </section>
 
       <section id="gallery" className="gallery container">
-        <h2>Our Heating Work</h2>
-        <p className="muted">See real heating projects and installations</p>
+        <h2>Ons verwarmingswerk</h2>
+        <p className="muted">Zie echte verwarmingsprojecten en installaties</p>
         <div className="grid">
           <figure className="card">
-            <img src={img1} alt="Boiler installation" />
-            <figcaption>Boiler installation</figcaption>
+            <img src={heating1} alt="Ketelinstallatie" />
+            <figcaption>Ketelinstallatie</figcaption>
           </figure>
           <figure className="card">
-            <img src={img2} alt="Radiator fitting" />
-            <figcaption>Radiator fitting</figcaption>
+            <img src={heating2} alt="Radiatormontage" />
+            <figcaption>Radiatormontage</figcaption>
           </figure>
           <figure className="card">
-            <img src={img3} alt="Heating system maintenance" />
-            <figcaption>Heating system maintenance</figcaption>
+            <img src={heating3} alt="Onderhoud verwarmingssysteem" />
+            <figcaption>Onderhoud verwarmingssysteem</figcaption>
           </figure>
         </div>
-        <p className="attribution muted">Images from local assets</p>
       </section>
 
       <section className="testimonials container">
-        <h2>What Our Clients Say</h2>
+        <h2>Wat onze klanten zeggen</h2>
         <blockquote className="testimonial">
-          "Bil Tech Heating fixed our boiler fast and professionally. Highly recommended!"<br />
+          "Bil Tech Verwarming repareerde onze ketel snel en professioneel. Zeer aanbevolen!"<br />
           <span className="author">— Sarah K.</span>
         </blockquote>
         <blockquote className="testimonial">
-          "Excellent service and friendly staff. Our new heating system works perfectly."<br />
+          "Uitstekende service en vriendelijk personeel. Ons nieuwe verwarmingssysteem werkt perfect."<br />
           <span className="author">— John D.</span>
         </blockquote>
       </section>
 
       <section className="contact container">
-        <h2>Contact Us</h2>
-        <form className="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="How can we help?" required></textarea>
-          <button type="submit" className="cta">Send Message</button>
+        <h2>Neem contact met ons op</h2>
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <input type="text" placeholder="Uw naam" required />
+          <input type="email" placeholder="Uw e-mailadres" required />
+          <textarea placeholder="Hoe kunnen we u helpen?" required></textarea>
+          <button type="submit" className="cta">Bericht verzenden</button>
         </form>
-        <p className="muted">Or call us: <strong>+1 234 567 890</strong></p>
+        <p className="muted">Of bel ons: <strong>+31 (0) 6 1234 5678</strong></p>
       </section>
 
       <section className="features container">
         <div className="feature">
-          <h2>Fast</h2>
-          <p>Rapid response and efficient heating solutions.</p>
+          <h2>Snel</h2>
+          <p>Snelle respons en efficiënte verwarmingsoplossingen.</p>
         </div>
         <div className="feature">
           <h2>Modern</h2>
-          <p>Latest heating technology and eco-friendly options.</p>
+          <p>Nieuwste verwarmingstechnologie en milieuvriendelijke opties.</p>
         </div>
         <div className="feature">
-          <h2>Accessible</h2>
-          <p>Clear communication and transparent pricing.</p>
+          <h2>Betrouwbaar</h2>
+          <p>Duidelijke communicatie en transparante prijzen.</p>
         </div>
       </section>
 
       <footer className="footer container">
-        <p>© {new Date().getFullYear()} Bil Tech Heating</p>
-        <p className="muted">Images: Local assets</p>
+        <p>© {new Date().getFullYear()} Bil Tech Verwarming</p>
+        <p className="muted">Alle rechten voorbehouden</p>
       </footer>
     </main>
   )
