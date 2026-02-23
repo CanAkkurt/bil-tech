@@ -60,7 +60,7 @@ export const Features = () => {
           {" "}
           Verwarmingsdiensten
         </span>
-        Kiezen
+        {" "} Kiezen
       </h2>
 
       <div className="flex flex-wrap md:justify-center gap-4">

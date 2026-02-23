@@ -12,7 +12,9 @@ export const Footer = () => {
             href="/"
             className="font-bold text-xl flex"
           >
-            <LogoIcon />
+            <image>
+              
+            </image>
             Verwarmingsoplossingen
           </a>
         </div>
@@ -95,7 +97,7 @@ export const Footer = () => {
             </a>
           </div>
 
-          <div>
+          {/* <div>
             <a
               rel="noreferrer noopener"
               href="#"
@@ -103,9 +105,9 @@ export const Footer = () => {
             >
               Certificeringen
             </a>
-          </div>
+          </div> */}
 
-          <div>
+          {/* <div>
             <a
               rel="noreferrer noopener"
               href="#testimonials"
@@ -113,13 +115,13 @@ export const Footer = () => {
             >
               Reviews
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 
       <section className="container pb-14 text-center">
         <h3>
-          &copy; 2024 Professionele Verwarmingsoplossingen. Alle rechten voorbehouden.
+          &copy; 2026 Professionele Verwarmingsoplossingen. Alle rechten voorbehouden.
         </h3>
       </section>
     </footer>
