@@ -1,7 +1,7 @@
 import React from 'react'
-import heating1 from './assets/images/heating1.jpg'
-import heating2 from './assets/images/heating2.jpg'
-import heating3 from './assets/images/heating3.jpg'
+import heating1 from './assets/images/heating1.svg'
+import heating2 from './assets/images/heating2.svg'
+import heating3 from './assets/images/heating3.svg'
 
 export default function App() {
   const handleSubmit = (e) => {
@@ -35,16 +35,16 @@ export default function App() {
         <p className="muted">Zie echte verwarmingsprojecten en installaties</p>
         <div className="grid">
           <figure className="card">
-            <img src={heating1} alt="Ketelinstallatie" />
-            <figcaption>Ketelinstallatie</figcaption>
+            <img src={heating1} alt="Moderne Ketel Installatie" />
+            <figcaption>Moderne Ketel Installatie</figcaption>
           </figure>
           <figure className="card">
-            <img src={heating2} alt="Radiatormontage" />
-            <figcaption>Radiatormontage</figcaption>
+            <img src={heating2} alt="Radiator Systeem" />
+            <figcaption>Radiator Systeem</figcaption>
           </figure>
           <figure className="card">
-            <img src={heating3} alt="Onderhoud verwarmingssysteem" />
-            <figcaption>Onderhoud verwarmingssysteem</figcaption>
+            <img src={heating3} alt="Professioneel Onderhoud" />
+            <figcaption>Professioneel Onderhoud</figcaption>
           </figure>
         </div>
       </section>
@@ -58,6 +58,10 @@ export default function App() {
         <blockquote className="testimonial">
           "Uitstekende service en vriendelijk personeel. Ons nieuwe verwarmingssysteem werkt perfect."<br />
           <span className="author">— John D.</span>
+        </blockquote>
+        <blockquote className="testimonial">
+          "Snelle reparatie van onze radiator. Zeer professioneel en betaalbaar!"<br />
+          <span className="author">— Maria V.</span>
         </blockquote>
       </section>
 
