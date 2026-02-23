@@ -1,5 +1,3 @@
-import { LogoIcon } from "./Icons";
-
 export const Footer = () => {
   return (
     <footer id="footer">
@@ -13,7 +11,7 @@ export const Footer = () => {
             className="font-bold text-xl flex"
           >
             <image>
-              
+
             </image>
             Verwarmingsoplossingen
           </a>
