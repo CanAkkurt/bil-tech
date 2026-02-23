@@ -1,4 +1,3 @@
-import { Statistics } from "./Statistics";
 import installateur from "../assets/installateur.jpg"
 
 export const About = () => {
