@@ -1,89 +1,66 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --bg: #0f172a;
-  --accent: #7c3aed;
-  --muted: #9aa4b2;
-  --white: #ffffff;
+html {
+  scroll-behavior: smooth;
 }
 
-*{box-sizing:border-box}
-html,body,#root{height:100%;margin:0}
-body{font-family:Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:linear-gradient(180deg,#071020 0%, var(--bg) 100%); color:var(--white); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
-
-.container{
-  width: min(1100px, 92%);
-  margin: 0 auto;
-  padding: 2rem 0;
+/* HeroCards background shadow */
+.shadow {
+  position: absolute;
+  background: hsl(var(--primary) / 0%);
+  border-radius: 24px;
+  rotate: 35deg;
+  z-index: -1;
+  width: 260px;
+  top: 200px;
+  height: 400px;
+  filter: blur(150px);
+  will-change: transform;
+  animation: shadow-slide infinite 4s linear alternate;
 }
 
-.hero{
-  padding: 8rem 0 6rem;
-  text-align:center;
+@keyframes shadow-slide {
+  from {
+    background: hsl(var(--primary) / 20%);
+    right: 460px;
+  }
+  to {
+    background: hsl(var(--primary) / 80%);
+    right: 160px;
+  }
 }
 
-.title{
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  margin:0;
-  letter-spacing: -0.02em;
+@media (max-width: 1024px) {
+  .shadow {
+    top: 70px;
+  }
+
+  @keyframes shadow-slide {
+    from {
+      background: hsl(var(--primary) / 20%);
+      right: 460px;
+    }
+    to {
+      background: hsl(var(--primary) / 50%);
+      right: 160px;
+    }
+  }
 }
 
-.subtitle{
-  color:var(--muted);
-  margin-top:1rem;
-  font-size:1.125rem;
+@media (max-width: 768px) {
+  .shadow {
+    top: 70px;
+    width: 100px;
+    height: 350px;
+    filter: blur(60px);
+  }
+
+  @keyframes shadow-slide {
+    from {
+      background: hsl(var(--primary) / 20%);
+      right: 280px;
+    }
+    to {
+      background: hsl(var(--primary) / 30%);
+      right: 100px;
+    }
+  }
 }
-
-.cta{
-  display:inline-block;
-  margin-top:1.5rem;
-  background:linear-gradient(90deg,var(--accent),#4f46e5);
-  color:var(--white);
-  padding:0.75rem 1.25rem;
-  border-radius:0.6rem;
-  text-decoration:none;
-  font-weight:600;
-  box-shadow:0 6px 18px rgba(124,58,237,0.18);
-  border:none;
-  cursor:pointer;
-}
-
-.cta:hover{opacity:0.9}
-
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:2rem}
-.feature{background:rgba(255,255,255,0.03);padding:1.5rem;border-radius:0.75rem}
-.feature h2{margin:0 0 0.5rem;font-size:1.25rem}
-.feature p{margin:0;color:var(--muted)}
-
-.gallery{margin-top:2.5rem}
-.gallery h2{margin:0 0 0.25rem;font-size:2rem}
-.gallery .muted{color:var(--muted);margin-bottom:1rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
-.card{background:rgba(255,255,255,0.02);border-radius:0.6rem;overflow:hidden;border:1px solid rgba(255,255,255,0.1)}
-.card img{width:100%;height:240px;object-fit:cover;display:block}
-.card figcaption{padding:0.75rem;color:var(--muted);font-size:0.95rem;margin:0}
-
-.services{margin-top:2.5rem}
-.services h2{font-size:2rem;margin-bottom:1rem}
-.service-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.75rem}
-.service-list li{background:rgba(255,255,255,0.04);padding:1rem;border-radius:0.5rem;color:var(--white);font-weight:500;border-left:3px solid var(--accent)}
-
-.testimonials{margin-top:2.5rem}
-.testimonials h2{font-size:2rem;margin-bottom:1rem}
-.testimonial{background:rgba(255,255,255,0.04);padding:1.5rem;border-radius:0.5rem;margin-bottom:1rem;color:var(--white);font-size:1.05rem;border-left:3px solid var(--accent)}
-.author{display:block;margin-top:0.75rem;color:var(--muted);font-size:0.95rem}
-
-.contact{margin-top:2.5rem}
-.contact h2{font-size:2rem;margin-bottom:1rem}
-.contact-form{display:flex;flex-direction:column;gap:1rem;margin-bottom:1.5rem;max-width:500px}
-.contact-form input,.contact-form textarea{padding:0.75rem;border-radius:0.5rem;border:1px solid rgba(255,255,255,0.2);font-size:1rem;background:rgba(255,255,255,0.05);color:var(--white)}
-.contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--muted)}
-.contact-form textarea{resize:vertical;min-height:100px}
-.contact-form button{align-self:flex-start}
-
-.muted{color:var(--muted)}
-
-.footer{border-top:1px solid rgba(255,255,255,0.03);padding:2rem 0;text-align:center;color:var(--muted);margin-top:3rem}
-.footer a{color:var(--muted);text-decoration:underline}
